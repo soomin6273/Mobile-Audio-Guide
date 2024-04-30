@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mobile Audio Guide</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    (function(d) {
+      var config = {
+        kitId: 'lss6gyn',
+        scriptTimeout: 3000,
+        async: true
+      },
+      h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+    })(document);
+  </script>
+  <style>
+    #play-pause-button {
+      cursor: pointer;
+    }
+  </style>
+ 
+</head>
+<body>
+
+<div class="All">
+    <div class="header">
+        <div class="grid_header">
+            <div class="blank"></div>
+            <div class="icon_back">
+                <a href="index.html">
+                    <img src="icon_back.png">
+                </a>
+            </div>
+            <div class="blank"></div>
+            <div class="logo"><img src="logo.png"></div>
+            <div class="blank"></div>
+        </div>
+    </div>
+
+    <div class="container_grey">
+  
+        <div class="title_image">
+            <div class="image"><img src="image09.png"></div>
+        </div>
+
+        <div class="column_page">
+            <div class="flex_page">
+                <div class="text_box_page">
+                    <div class="text_page_big">09. 전환</div>
+                </div>
+                <div class="play_list">
+                    <audio id="music-player1" src="09_turningpoint_voice.mp3"></audio>
+                    <img id="play-pause-button1" src="play.png" alt="Play">
+                </div> 
+            </div>
+        </div>
+
+        <div class="script_big">
+            전환
+            <div class="script_sub">2023<br>나, 다짐</div>
+        </div>
+
+    </div>
+    
+    <div class="spacer02"></div>
+
+    <div class="container_white">
+        <div class="column_page">
+            <div class="flex_page">
+                <div class="text_box_page">
+                    <div class="text_page_small">해설</div>
+                </div>
+                <div class="play_list">
+                    <audio id="music-player2" src="09_turningpoint_guide.mp3"></audio>
+                    <img id="play-pause-button2" src="play.png" alt="Play">
+                </div> 
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="script">
+                여러분은 1월 1일에 어떤 새해 목표를 세우셨나요? 저는 작년부터 신년 목표 대신에 ‘올해의 단어’를 정하고 있습니다. ‘올해의 사자성어’나 일본의 ‘올해의 한자’와 비슷하지만, 한 해에 있었던 일을 요약하는 게 아니라 다가올 한 해의 행동 강령을 정하는 개념입니다. 이 단어를 크고 작은 선택의 순간에 기준으로 삼을 수 있게요. 어떻게 보면, 팬톤에서 매년 공개되는 올해의 컬러와 가장 비슷한 것 같기도 하네요. 
+                <br>지난 2023년 제가 정한 단어는 ‘전환’. 즉, 터닝포인트였습니다. 처음으로 휴학을 하고 학교 밖에서 사회생활을 하며 많은 것을 배우고 성장하겠다는 포부를 담은 단어였지요. 1년이 지난 지금 돌아보면, 확실히 이룬 것 같습니다.
+                <div class="spacer03"></div>
+            </div>
+        
+        <div class="line"></div>
+        
+        <div class="column_list">
+            <div class="grid_list">
+                <div class="blank"></div>
+                <div class="thumbnail"><img src="thumbnail10.png"></div>
+                <div class="blank"></div>
+                <div class="text_box_list">
+                    <div class="text_title">10. 도전</div>
+                </div>
+                <div class="blank"></div>
+                <div class="play_list">
+                    <a href="10.html">
+                        <img src="play.png" width="80%">
+                    </a>
+                </div>
+                <div class="blank"></div>
+            </div>
+        </div>
+        
+            </div>
+        </div>
+        <script>
+            var musicPlayer1 = document.getElementById('music-player1');
+            var playPauseButton1 = document.getElementById('play-pause-button1');
+            
+            playPauseButton1.addEventListener('click', function() {
+                if (musicPlayer1.paused) {
+                    musicPlayer1.play();
+                    playPauseButton1.src = 'pause.png';
+                } else {
+                    musicPlayer1.pause();
+                    playPauseButton1.src = 'play.png';
+                }
+            });
+          
+            musicPlayer1.addEventListener('ended', function() {
+                playPauseButton1.src = 'play.png';
+            });
+            
+            var musicPlayer2 = document.getElementById('music-player2');
+            var playPauseButton2 = document.getElementById('play-pause-button2');
+            
+            playPauseButton2.addEventListener('click', function() {
+                if (musicPlayer2.paused) {
+                    musicPlayer2.play();
+                    playPauseButton2.src = 'pause.png';
+                } else {
+                    musicPlayer2.pause();
+                    playPauseButton2.src = 'play.png';
+                }
+            });
+          
+            musicPlayer2.addEventListener('ended', function() {
+                playPauseButton2.src = 'play.png';
+            });
+        </script>
+        
+          
+        </body>
+        </html>
+            

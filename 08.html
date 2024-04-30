@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mobile Audio Guide</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    (function(d) {
+      var config = {
+        kitId: 'lss6gyn',
+        scriptTimeout: 3000,
+        async: true
+      },
+      h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+    })(document);
+  </script>
+  <style>
+    #play-pause-button {
+      cursor: pointer;
+    }
+  </style>
+ 
+</head>
+<body>
+
+<div class="All">
+    <div class="header">
+        <div class="grid_header">
+            <div class="blank"></div>
+            <div class="icon_back">
+                <a href="index.html">
+                    <img src="icon_back.png">
+                </a>
+            </div>
+            <div class="blank"></div>
+            <div class="logo"><img src="logo.png"></div>
+            <div class="blank"></div>
+        </div>
+    </div>
+
+    <div class="container_grey">
+  
+        <div class="title_image">
+            <div class="image"><img src="image08.png"></div>
+        </div>
+
+        <div class="column_page">
+            <div class="flex_page">
+                <div class="text_box_page">
+                    <div class="text_page_big">08. 좋아하는 것만으로</div>
+                </div>
+                <div class="play_list">
+                    <audio id="music-player1" src="08_HowtoWeLive_voice.mp3"></audio>
+                    <img id="play-pause-button1" src="play.png" alt="Play">
+                </div> 
+            </div>
+        </div>
+
+        <div class="script_big">
+            좋아하는 것만으로 먹고살 수 있을까요? 
+            <br>먹고사는 것만으로 좋을 수 있을까요?
+            <div class="script_sub">2022<br>미상, 조형갤러리 작품</div>
+        </div>
+
+    </div>
+    
+    <div class="spacer02"></div>
+
+    <div class="container_white">
+        <div class="column_page">
+            <div class="flex_page">
+                <div class="text_box_page">
+                    <div class="text_page_small">해설</div>
+                </div>
+                <div class="play_list">
+                    <audio id="music-player2" src="08_HowtoWeLive_guide.mp3"></audio>
+                    <img id="play-pause-button2" src="play.png" alt="Play">
+                </div> 
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="script">
+                공간디자인학과 전시에서 본 문장입니다. 정확히는 기억이 나지 않지만, 작품을 만든 학생이 존경하는 어른의 말을 가져온 거라고 적혀 있었던 것 같습니다. 저는 그 학생분도, 이 말을 했던 사람도 알지 못해서 제 마음대로 교수님들 정도 나이대의 여성 목소리로 생각했었습니다. 디자이너를 꿈꾸는 학생으로서 한 번쯤은 꼭 생각하게 되는 부분을 날카롭게 찌르는 문장이라, 공감도 되고 기억에 강하게 남아 있습니다.
+                아무래도, 여러분도 그렇겠지만, 저는 먹고사는 것만으로 좋을 수는 없을 것 같아요. 
+                <div class="spacer03"></div>
+            </div>
+        
+        <div class="line"></div>
+        
+        <div class="column_list">
+            <div class="grid_list">
+                <div class="blank"></div>
+                <div class="thumbnail"><img src="thumbnail09.png"></div>
+                <div class="blank"></div>
+                <div class="text_box_list">
+                    <div class="text_title">09. 전환</div>
+                </div>
+                <div class="blank"></div>
+                <div class="play_list">
+                    <a href="09.html">
+                        <img src="play.png" width="80%">
+                    </a>
+                </div>
+                <div class="blank"></div>
+            </div>
+        </div>
+        
+            </div>
+        </div>
+        <script>
+            var musicPlayer1 = document.getElementById('music-player1');
+            var playPauseButton1 = document.getElementById('play-pause-button1');
+            
+            playPauseButton1.addEventListener('click', function() {
+                if (musicPlayer1.paused) {
+                    musicPlayer1.play();
+                    playPauseButton1.src = 'pause.png';
+                } else {
+                    musicPlayer1.pause();
+                    playPauseButton1.src = 'play.png';
+                }
+            });
+          
+            musicPlayer1.addEventListener('ended', function() {
+                playPauseButton1.src = 'play.png';
+            });
+            
+            var musicPlayer2 = document.getElementById('music-player2');
+            var playPauseButton2 = document.getElementById('play-pause-button2');
+            
+            playPauseButton2.addEventListener('click', function() {
+                if (musicPlayer2.paused) {
+                    musicPlayer2.play();
+                    playPauseButton2.src = 'pause.png';
+                } else {
+                    musicPlayer2.pause();
+                    playPauseButton2.src = 'play.png';
+                }
+            });
+          
+            musicPlayer2.addEventListener('ended', function() {
+                playPauseButton2.src = 'play.png';
+            });
+        </script>
+        
+          
+        </body>
+        </html>
+            

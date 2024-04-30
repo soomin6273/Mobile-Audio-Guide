@@ -33,13 +33,11 @@
         </div>
     </div>
 
-    <div class="container">
+    <div class="container_gradient">
   
-      <div class="title_area">
-        <div class="title_poster"><img src="title_00.png" alt="Title Poster"></div>
-      </div>
-  
-      <div class="spacer"></div>
+        <div class="title_image">
+            <div class="image"><img src="image00.png"></div>
+        </div>
 
         <div class="column_page">
             <div class="flex_page">
@@ -47,24 +45,25 @@
                     <div class="text_page_small">00. 전시 소개</div>
                 </div>
                 <div class="play_list">
-                    <img src="play.png" width="80%">
-                </div>
+                    <audio id="music-player" src="00_intro.mp3"></audio>
+                    <img id="play-pause-button" src="play.png" alt="Play">
+                </div> 
             </div>
         </div>
 
         <div class="script">
             <말을 거는 목소리> 전시에 오신 여러분 안녕하세요, 반갑습니다.
             <br>저는 이 전시의 작가이자, 여러분께 각각의 목소리에 대한 이야기를 들려드릴 큐레이터 고수민입니다.
-            <br><br>걷다보면 눈에 들어오는 다양한 표지판들을 만나게 됩니다.
+            <br><br>걷다 보면 눈에 들어오는 다양한 표지판들을 만나게 됩니다.
             <br>관계자 외 출입 금지, 갈아타는 곳, 맛있는 식혜 500원, 불조심……
-            <br><br>우리는 그런 표지판을 보며 위험을 알아채기도 하고, 길을 찾기도 합니다. 나와 상관 없는 이야기일 경우 무시하고 지나치기도 하지요. 
+            <br><br>우리는 그런 표지판을 보며 위험을 알아채기도 하고, 길을 찾기도 합니다. 나와 상관없는 이야기일 경우 무시하고 지나치기도 하지요. 
             <br><br>저는 이런 표지판들이, 길을 걷던 저를 불러세워서 말을 거는 것 같다고 느끼곤 합니다. 
             <br>발걸음을 멈추고, 내가 하는 말을 들어보라고.
             <br><br>동시에, 살면서 듣게 되는 실제 목소리들을 표지판에 겹쳐 봅니다.
             <br><br>나를 걱정하기도, 조언을 하기도, 나를 꾸짖기도, 그저 자신의 이야기를 전하기도 하는 가까운 사람의, 혹은 모르는 사람의 목소리들.
-            <br>저는 그런 목소리에 뒤를 돌아봅니다. 가만히 들어봅니다. 그리고 위험을 알아채기도 하고, 길을 찾기도 합니다. 나와 상관 없는 이야기일 경우 무시하고 지나치기도 하지요. 
+            <br>저는 그런 목소리에 뒤를 돌아봅니다. 가만히 들어봅니다. 그리고 위험을 알아채기도 하고, 길을 찾기도 합니다. 나와 상관없는 이야기일 경우 무시하고 지나치기도 하지요. 
             <br><br>이 전시에서는 저에게 말을 건넴으로써 '표지판'이 되었던, 10가지의 목소리를 소개합니다.
-            <br>이번 전시를 통해 우리를 멈춰세웠던 삶의 다양한 목소리를 떠올려보는 시간이 되기를 바랍니다.
+            <br>이번 전시를 통해 우리를 멈춰 세웠던 삶의 다양한 목소리를 떠올려보는 시간이 되기를 바랍니다.
         </div>
 
         <div class="spacer03"></div>
@@ -77,14 +76,14 @@
     <div class="column_list">
         <div class="grid_list">
             <div class="blank"></div>
-            <div class="thumbnail"><img src="thumbnail00.png"></div>
+            <div class="thumbnail"><img src="thumbnail01.png"></div>
             <div class="blank"></div>
             <div class="text_box_list">
-                <div class="text_title">00. 전시 소개</div>
+                <div class="text_title">01. 노예같은 삶</div>
             </div>
             <div class="blank"></div>
             <div class="play_list">
-                <a href="00.html">
+                <a href="01.html">
                     <img src="play.png" width="80%">
                 </a>
             </div>
@@ -94,7 +93,24 @@
 
     </div>
 </div>
-
+<script>
+    var musicPlayer = document.getElementById('music-player');
+    var playPauseButton = document.getElementById('play-pause-button');
+    
+    playPauseButton.addEventListener('click', function() {
+        if (musicPlayer.paused) {
+            musicPlayer.play();
+            playPauseButton.src = 'pause.png';
+        } else {
+            musicPlayer.pause();
+            playPauseButton.src = 'play.png';
+        }
+    });
+  
+    musicPlayer.addEventListener('ended', function() {
+        playPauseButton.src = 'play.png';
+    });
+</script>
 </body>
 </html>
     

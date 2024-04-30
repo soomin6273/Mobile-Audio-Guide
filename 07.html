@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mobile Audio Guide</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    (function(d) {
+      var config = {
+        kitId: 'lss6gyn',
+        scriptTimeout: 3000,
+        async: true
+      },
+      h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+    })(document);
+  </script>
+  <style>
+    #play-pause-button {
+      cursor: pointer;
+    }
+  </style>
+ 
+</head>
+<body>
+
+<div class="All">
+    <div class="header">
+        <div class="grid_header">
+            <div class="blank"></div>
+            <div class="icon_back">
+                <a href="index.html">
+                    <img src="icon_back.png">
+                </a>
+            </div>
+            <div class="blank"></div>
+            <div class="logo"><img src="logo.png"></div>
+            <div class="blank"></div>
+        </div>
+    </div>
+
+    <div class="container_grey">
+  
+        <div class="title_image">
+            <div class="image"><img src="image07.png"></div>
+        </div>
+
+        <div class="column_page">
+            <div class="flex_page">
+                <div class="text_box_page">
+                    <div class="text_page_big">07. 뭐든 해 보세요</div>
+                </div>
+                <div class="play_list">
+                    <audio id="music-player1" src="07_takePhoto_voice.mp3"></audio>
+                    <img id="play-pause-button1" src="play.png" alt="Play">
+                </div> 
+            </div>
+        </div>
+
+        <div class="script_big">
+            지레 겁먹지 말고 뭐든 해 보세요.<br>사진이 필요하면, 사진을 찍으세요. 
+            <div class="script_sub">2024<br>교수님, 특강</div>
+        </div>
+
+    </div>
+    
+    <div class="spacer02"></div>
+
+    <div class="container_white">
+        <div class="column_page">
+            <div class="flex_page">
+                <div class="text_box_page">
+                    <div class="text_page_small">해설</div>
+                </div>
+                <div class="play_list">
+                    <audio id="music-player2" src="07_takePhoto_guide.mp3"></audio>
+                    <img id="play-pause-button2" src="play.png" alt="Play">
+                </div> 
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="script">
+                수업을 직접 들어본 적은 없는 교수님의 특강이었습니다. 많은 멋진 프로젝트들을 보여주셨지만, 가장 기억에 남는 건 이 말이었던 것 같아요. 
+                <br>저는 해본 적 있는 것만 하려고 하는 편이라서, 사실은 지레 겁먹을 때가 더 많습니다. 특히 예시로 드셨던 게 사진이라서 더 마음을 읽힌 것 같고, 조금 찔렸습니다. 저는 사진을 잘 못 찍고 관심도 그렇게까지 없지만, 최근에는 주변에 사진을 잘 찍는 사람들이 눈에 들어오더라고요. 부럽다. 나도 할 줄 알긴 해야 하는데…정도로만 생각했었는데, 사실, 사진이 필요하면 사진을 찍으면 되는 겁니다. 내가 일러스트레이터가 아니더라도, 그림이 필요하면 그림을 그리면 되는 거고요. 망설일 필요가 어디에 있겠어요? 
+                <div class="spacer03"></div>
+            </div>
+        
+        <div class="line"></div>
+        
+        <div class="column_list">
+            <div class="grid_list">
+                <div class="blank"></div>
+                <div class="thumbnail"><img src="thumbnail08.png"></div>
+                <div class="blank"></div>
+                <div class="text_box_list">
+                    <div class="text_title">08. 좋아하는 것만으로</div>
+                </div>
+                <div class="blank"></div>
+                <div class="play_list">
+                    <a href="08.html">
+                        <img src="play.png" width="80%">
+                    </a>
+                </div>
+                <div class="blank"></div>
+            </div>
+        </div>
+        
+            </div>
+        </div>
+        <script>
+            var musicPlayer1 = document.getElementById('music-player1');
+            var playPauseButton1 = document.getElementById('play-pause-button1');
+            
+            playPauseButton1.addEventListener('click', function() {
+                if (musicPlayer1.paused) {
+                    musicPlayer1.play();
+                    playPauseButton1.src = 'pause.png';
+                } else {
+                    musicPlayer1.pause();
+                    playPauseButton1.src = 'play.png';
+                }
+            });
+          
+            musicPlayer1.addEventListener('ended', function() {
+                playPauseButton1.src = 'play.png';
+            });
+            
+            var musicPlayer2 = document.getElementById('music-player2');
+            var playPauseButton2 = document.getElementById('play-pause-button2');
+            
+            playPauseButton2.addEventListener('click', function() {
+                if (musicPlayer2.paused) {
+                    musicPlayer2.play();
+                    playPauseButton2.src = 'pause.png';
+                } else {
+                    musicPlayer2.pause();
+                    playPauseButton2.src = 'play.png';
+                }
+            });
+          
+            musicPlayer2.addEventListener('ended', function() {
+                playPauseButton2.src = 'play.png';
+            });
+        </script>
+        
+          
+        </body>
+        </html>
+            
